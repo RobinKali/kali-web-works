@@ -49,16 +49,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ------------------- //
-    // CONTACT FORMULIER
+    // CONTACT FORMULIER MET AJAX (FETCH API)
     // ------------------- //
     const contactForm = document.getElementById('contact-form');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Hier zou je de logica voor het versturen van het formulier plaatsen
-            // (bijv. met fetch() naar een server-endpoint)
-            alert('Bedankt voor je bericht!');
-            contactForm.reset();
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault(); // <-- NU WEL NODIG! We stoppen de browser redirect.
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                // Verstuur data naar Formspree op de achtergrond
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json' // Cruciaal voor Formspree API
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Bedankt voor je bericht! Ik neem snel contact met je op!');
+                    form.reset(); // Formulier resetten na succes
+                } else {
+                    // Verwerk foutmeldingen van Formspree
+                    alert('Er is een fout opgetreden bij het versturen. Check de velden.');
+                }
+            } catch (error) {
+                // Verwerk netwerkfouten (bijv. geen internet)
+                alert('Netwerkfout! Probeer het later opnieuw.');
+            }
         });
     }
 

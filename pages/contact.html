@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Neem contact op met Kali Web Works voor vragen, offertes of een vrijblijvend gesprek. Vind hier onze contactgegevens, adres en locatie.">
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://formspree.io;">
     <title>Contact - Kali Web Works</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/contact.css">
@@ -68,7 +69,7 @@
                     </div>
                     <div class="contact-form-wrapper">
                         <h2>Stuur een bericht</h2>
-                        <form class="contact-form" id="contact-form">
+                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdkvpjyw" method="POST">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" required>
                                 <label for="name">Naam</label>
