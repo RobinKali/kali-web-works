@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kali Web Works transformeert ideeën naar vloeiende, interactieve en gebruiksvriendelijke web-ervaringen. Bekijk ons portfolio en ontdek onze diensten.">
+    <title>Kali Web Works - Webdesign & Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="media/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">Kali Web Works</a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#projecten">Portfolio</a></li>
+                    <li><a href="#skills">Diensten</a></li>
+                    <li><a href="#pakketten">Pakketten</a></li>
+                    <li><a href="#about-me">Over</a></li>
+                    <li><a href="subpaginas/contact.html">Contact</a></li>
+                    <li>
+                        <button id="darkModeToggle" class="dark-mode-button" aria-label="Toggle dark mode">
+                            <span class="light-mode-text">Light mode</span>
+                            <span class="dark-mode-text">Dark mode</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <!-- H1 via typewriter js -->
+                <h1 id="hero-title" class="animate-on-scroll">Kali Web Works.</h1>
+                <p class="animate-on-scroll">Vertaalt jouw idee naar een snelle, interactieve website.</p>
+                <a href="#projecten" class="cta-button animate-on-scroll">Inspiratie</a>
+            </div>
+            <div id="dynamic-bg-container"></div>
+            <div class="hero-background-effect"></div>
+        </section>
+
+        <section id="projecten" class="projects-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Portfolio</h2>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <a href="project-kapsalon.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('media/imacand2xiphonekapsalon.png')"></div>
+                            <div class="project-content">
+                                <h3>Kapsalon</h3>
+                                <p>Een moderne website voor een lokale kapsalon gericht op online afspraken.</p>
+                                <ul class="project-tags">
+                                    <span>Webshop</span>
+                                    <span>Support</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Project 2 -->
+                    <a href="project-trainer.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('media/imacand2xiphonept.png');"></div>
+                            <div class="project-content">
+                                <h3>Personal Trainer</h3>
+                                <p>Een energieke en motiverende onepager voor een Personal Trainer uit Enschede.</p>
+                                <ul class="project-tags">
+                                    <span>Design</span>
+                                    <span>Hosting</span>
+                                    <span>Support</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Project 3 -->
+                    <a href="project-huisverhuur.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('media/imacand2xiphonevakantiehuis.png');"></div>
+                            <div class="project-content">
+                                <h3>Vakantiehuis verhuur</h3>
+                                <p>Een stijlvolle website voor de verhuur van een vakantiehuis met boekingssysteem.</p>
+                                <ul class="project-tags">
+                                    <span>Maatwerk</span>
+                                    <span>Support</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-nav" id="projects-nav"></div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Mijn Diensten</h2>
+                <div class="skills-grid" id="skills-grid">
+                    <button class="skill-item animate-on-scroll" data-service="design">Design</button>
+                    <button class="skill-item animate-on-scroll" data-service="websites">Websites</button>
+                    <button class="skill-item animate-on-scroll" data-service="support">Support</button>
+                    <button class="skill-item animate-on-scroll" data-service="hosting">Hosting</button>
+                    <button class="skill-item animate-on-scroll" data-service="beveiliging">Beveiliging</button>
+                    <button class="skill-item animate-on-scroll" data-service="maatwerk">Maatwerk</button>
+                </div>
+                <!-- Container voor de detailweergave van een dienst -->
+                <div id="service-detail-container" class="service-detail-container">
+                    <button id="back-to-grid-button" class="back-to-grid-button">&larr; Terug naar diensten</button>
+                    <h3 id="service-detail-title"></h3>
+                    <p id="service-detail-description"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Klanten aan het woord</h2>
+                <div class="testimonial-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Ons idee is perfect vertaald naar een snelle en moderne website. De samenwerking met Robin was vlekkeloos en ik ben heel blij met het resultaat!"</p>
+                        <cite>— Anna de Vries, Kapsalon Anna</cite>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Professioneel, creatief en technisch vaardig. Mijn boekingen zijn toegenomen sinds de livegang van de nieuwe site. Een aanrader!"</p>
+                        <cite>— Mark van Crooij, Vakantiehuis Verhuur</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pakketten" class="packages-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Kant en klare pakketten</h2>
+                <div class="project-grid">
+                    <!-- Pakket 1 -->
+                    <a href="subpaginas/pakket-visitekaartje.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Basis website</h3>
+                                <p>Een krachtige one-page website, perfect voor de startende ZZP'er. Snel, professioneel en direct to the point.</p>
+                                <ul class="project-tags">
+                                    <span>€ 595,-</span>
+                                    <span>1-2 weken</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Pakket 2 -->
+                    <a href="subpaginas/pakket-mkb.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>MKB Pakket</h3>
+                                <p>Een complete website met meerdere pagina's en een beheersysteem om zelf content aan te passen.</p>
+                                <ul class="project-tags">
+                                    <span>€ 1.150,-</span>
+                                    <span>2-4 weken</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Pakket 3 -->
+                    <a href="subpaginas/pakket-onderhoud.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Zorgeloos Online</h3>
+                                <p>Hosting, domeinnaam, beveiliging en maandelijkse support. De complete technische ontzorging voor je website.</p>
+                                <ul class="project-tags">
+                                    <span>€ 35,- p/m</span>
+                                </ul>
+                                <span class="project-link">Lees meer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Pakket 4 -->
+                    <a href="subpaginas/pakket-extras.html" class="project-card-link animate-on-scroll">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3>Extra's & Maatwerk</h3>
+                                <p>Breid je pakket uit met professionele fotografie, QR codes, tekstschrijven, een logo en meer.</p>
+                                <span class="project-link">Bekijk opties</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-nav" id="packages-nav"></div>
+            </div>
+        </section>
+
+        <section id="about-me" class="about-me-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Over Mij</h2>
+                <div class="about-me-content">
+                    <div class="about-me-image animate-on-scroll">
+                        <img src="media/RKC.png" alt="Foto Kali">
+                    </div>
+                    <div class="about-me-text animate-on-scroll">
+                        <h3>Hoi, ik ben Robin Kali!</h3>
+                        <p>Ik maak van jouw creatieve idee een unieke, gebruiksvriendelijke website. Ik geloof dat een goede website meer is dan alleen een online visitekaartje; het is een digitale ervaring die je doelgroep inspireert en activeert.</p>
+                        <p>We gaan samen in overleg om van jouw idee een snelle website te maken die werkt op alle apparaten! Zo komt jouw merkidentiteit online tot leven!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Interesse gewekt?</h2>
+                <p class="animate-on-scroll">Nieuwsgierig geworden of gewoon een vraag? Neem vrijblijvend contact met me op.</p>
+                <form class="contact-form animate-on-scroll" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Naam</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">E-mailadres</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Jouw bericht</label>
+                    </div>
+                    <button type="submit" class="cta-button">Verstuur bericht</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="cookie-banner">
+        <div class="container">
+            <p>Ik gebruik functionele cookies om je ervaring op mijn website te verbeteren. Door op "Alles accepteren" te klikken, ga je hiermee akkoord.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cta-button">Alles accepteren</button>
+                <button id="refuse-cookies" class="cta-button secondary">Alles weigeren</button>
+            </div>
+        </div>
+    </div>
+        <footer class="site-footer-bottom">
+            <div class="container">
+                <div class="footer-contact">
+                    <span>06-11594549</span>
+                    <a href="mailto:info@kaliwebworks.nl">info@kaliwebworks.nl</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="current-year">2025</span> Kali Web Works. Alle rechten voorbehouden.</p>
+                    <div class="footer-privacy">
+                        <a href="subpaginas/privacy.html">Privacyverklaring</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="LinkedIn profiel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    <a href="#" target="_blank" aria-label="Instagram profiel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                    <a href="#" target="_blank" aria-label="Facebook profiel"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.888v1.112h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg></a>
+                </div>
+            </div>
+        </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Terug naar boven" title="Terug naar boven">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="script.js" defer></script>
+    <script src="hero-background.js" defer></script>
+</body>
+</html>

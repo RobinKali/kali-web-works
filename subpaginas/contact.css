@@ -1,0 +1,85 @@
+/* --- Stijlen voor de Contact Pagina --- */
+
+.contact-page-header {
+    padding-top: 140px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.contact-page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-page-content {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-details h2,
+.contact-form-wrapper h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Verberg de globale h2-lijn */
+.contact-details h2::after,
+.contact-form-wrapper h2::after {
+    display: none;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    font-size: 1.1rem;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.google-maps iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    border: 1px solid var(--bg-color);
+}
+
+/* Hergebruik stijlen van het formulier op de homepage */
+.contact-form-wrapper .contact-form {
+    max-width: 100%;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page-header h1 {
+        font-size: 2.5rem;
+    }
+}
