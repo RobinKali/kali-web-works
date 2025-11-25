@@ -38,7 +38,6 @@
     transform: rotate(-45deg) translateY(-1px) translateX(1px);
 }
 
-/* --- Terug naar boven knop --- */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -65,7 +64,6 @@
     transform: translateY(0);
 }
 
-/* --- Animaties bij scrollen --- */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -77,13 +75,13 @@
     transform: translateY(0);
 }
 
-/* --- Media Query voor Mobiel --- */
+/* --- Media Query --- */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
     .main-nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Start buiten beeld */
+        right: -100%; 
         width: 80%;
         height: 100vh;
         background-color: var(--background-color, #fff);

@@ -127,13 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const animate = () => {
-            // Beweeg de huidige positie geleidelijk naar de doelpositie (lerping)
+            // Beweeg de huidige positie geleidelijk naar de doelpositie
             currentX += (targetX - currentX) * smoothingFactor;
             currentY += (targetY - currentY) * smoothingFactor;
 
             allSnippets.forEach(snippetObj => {
                 const depth = snippetObj.el.dataset.depth;
-                // De verplaatsing is negatief voor een natuurlijk parallax-effect
+                // De verplaatsing is negatief omdat we een parallax-effect willen
                 const moveX = -currentX * movementStrength * depth;
                 const moveY = -currentY * movementStrength * depth;
 

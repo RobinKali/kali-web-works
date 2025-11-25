@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const body = document.body; // Definieer body globaal voor het hele script
+    const body = document.body; 
 
     // ------------------- //
     // MOBIEL MENU LOGICA
     // ------------------- //
+
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
     const navLinks = mainNav.querySelectorAll('a');
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(typeWriter, 150); // Snelheid van typen
             }
         }
-        // Start de animatie met een kleine vertraging voor een beter effect
+        // Start de animatie met een kleine vertraging
         setTimeout(typeWriter, 500);
     }
 
@@ -55,18 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault(); // <-- NU WEL NODIG! We stoppen de browser redirect.
+            e.preventDefault(); // Voorkom standaard formulierverzending
 
             const form = e.target;
             const formData = new FormData(form);
 
             try {
-                // Verstuur data naar Formspree op de achtergrond
+                // Verstuur data naar Formspree
                 const response = await fetch(form.action, {
                     method: form.method,
                     body: formData,
                     headers: {
-                        'Accept': 'application/json' // Cruciaal voor Formspree API
+                        'Accept': 'application/json' // Voor Formspree API
                     }
                 });
 
@@ -118,10 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cookie_consent', 'refused');
         cookieBanner.classList.remove('show');
     });
-
-
-    // --- BESTAANDE CODE HIERONDER ---
-
 
     // ------------------- //
     // DARK MODE LOGICA
@@ -195,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailDescription = document.getElementById('service-detail-description');
     const backButton = document.getElementById('back-to-grid-button');
 
-    // De content voor elke dienst
+    // Dienst content
     const serviceDescriptions = {
         design: {
             title: 'UI/UX Design',
@@ -282,14 +279,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const setupCarouselNavigation = (gridSelector, navSelector) => {
         const grid = document.querySelector(gridSelector);
         const nav = document.querySelector(navSelector);
-        // Gebruik .project-card-link voor beide grids, aangezien ze dezelfde structuur hebben
         const items = grid.querySelectorAll('.project-card-link');
 
         if (!grid || !nav || items.length === 0) {
             return;
         }
 
-        // Maak de navigatiebolletjes aan
+        // navigatiebolletjes
         items.forEach((_, index) => {
             const dot = document.createElement('span');
             dot.classList.add('nav-dot');
@@ -331,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Gebruik een Intersection Observer om de actieve stip bij te werken
+        // Intersection Observer om de actieve stip bij te werken
         const observer = new IntersectionObserver(updateActiveDot, { root: grid, threshold: 0.5 });
         items.forEach(item => observer.observe(item));
     };
@@ -357,7 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Functie om de animatie-index toe te voegen aan grid-items.
-    // Dit hoeft maar één keer te gebeuren, niet bij elke scroll.
     const setupAnimationIndices = () => {
         document.querySelectorAll('.project-grid .animate-on-scroll').forEach((el, i) => el.dataset.index = i);
         document.querySelectorAll('.testimonial-grid .animate-on-scroll').forEach((el, i) => el.dataset.index = i);

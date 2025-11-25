@@ -4,27 +4,26 @@
 :root {
     --bg-color: #f8f9fa;
     --text-color: #212529;
-    --primary-color: #0a7ea3; /* Aangepast van origineel */
-    --primary-hover: #043a4a; /* Aangepast van origineel */
+    --primary-color: #0a7ea3; 
+    --primary-hover: #043a4a; 
     --card-bg: #ffffff;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     --header-bg: rgba(248, 249, 250, 0.8);
     --font-family: 'Poppins', sans-serif;
 }
 
-/* Globale reset voor box-sizing om lay-out problemen te voorkomen */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body.dark-mode {
-    --bg-color: #121212; /* Aangepast van origineel */
+    --bg-color: #121212; 
     --text-color: #f8f9fa;
-    --primary-color: #1a9bc1; /* Aangepast van origineel */
-    --primary-hover: #0f5c75; /* Aangepast van origineel */
-    --card-bg: #1e1e1e; /* Aangepast van origineel */
+    --primary-color: #1a9bc1; 
+    --primary-hover: #0f5c75; 
+    --card-bg: #1e1e1e; 
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    --header-bg: rgba(18, 18, 18, 0.8); /* Aangepast van origineel */
+    --header-bg: rgba(18, 18, 18, 0.8); 
 }
 
 html {
@@ -38,13 +37,11 @@ body {
     margin: 0;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Flexbox voor sticky footer */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Bugfix: Voorkom scrollen op de body als het mobiele menu open is */
 body.no-scroll {
     overflow: hidden;
     position: fixed;
@@ -88,25 +85,24 @@ body.dark-mode .site-header.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Noodzakelijk voor positionering van mobiele menu knop */
+    position: relative; /* Positionering van mobiele menu knop */
 }
 
 .logo {
     font-weight: 700;
-    font-size: 2rem; /* Iets groter gemaakt zoals gevraagd */
+    font-size: 2rem; 
     color: var(--primary-color);
     text-decoration: none;
     /* Voorbereiding voor de hover-animatie */
-    transition: transform 0.4s ease; /* Behoud de speelse rotatie-transitie */
+    transition: transform 0.4s ease;
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--primary-color);
-    position: relative; /* Noodzakelijk voor het pseudo-element */
-    overflow: hidden; /* Verbergt de gloed buiten het element */
+    position: relative; 
+    overflow: hidden; 
 }
 
-/* De gele gloed die over de tekst beweegt */
 .logo::after {
     content: '';
     position: absolute;
@@ -120,11 +116,11 @@ body.dark-mode .site-header.scrolled {
 }
 
 .logo:hover {
-    transform: scale(1.05) rotate(-2deg); /* Speelse rotatie en vergroting */
+    transform: scale(1.05) rotate(-2deg); 
 }
 
 .logo:hover::after {
-    transform: translateX(-101%); /* Beweeg naar buiten beeld (links) */
+    transform: translateX(-101%); 
 }
 
 .menu-toggle {
@@ -137,7 +133,7 @@ body.dark-mode .site-header.scrolled {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Lijn menu-items rechts uit */
+    justify-content: flex-end; 
 }
 
 .main-nav li {
@@ -167,26 +163,25 @@ body.dark-mode .site-header.scrolled {
     width: 100%;
 }
 
-/* Dark Mode Knop */
 .dark-mode-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     color: var(--text-color);
-    font-family: inherit; /* Zorgt voor hetzelfde lettertype */
-    font-size: inherit; /* Zorgt voor dezelfde lettergrootte */
-    font-weight: 600; /* Maak de tekst consistent met andere menu-items */
+    font-family: inherit; 
+    font-size: inherit; 
+    font-weight: 600;
     position: relative;
 }
 .dark-mode-button:hover {
     color: var(--primary-color);
 }
 
-/* Verberg de oude iconen (voor het geval ze nog ergens staan) */
-.dark-mode-button svg {
+/* Verberg de oude iconen */
+/* .dark-mode-button svg {
     display: none;
-}
+} */
 
 /* Standaard (light mode): toon "Dark mode" tekst */
 .dark-mode-text { display: block; }
@@ -212,7 +207,7 @@ body.dark-mode .light-mode-text { display: block; }
     width: 100%;
 }
 
-/* Verbeterde toegankelijkheid: Duidelijke focus voor toetsenbordgebruikers */
+/* Verbeterde toegankelijkheid */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -229,7 +224,7 @@ input:focus-visible {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; /* Header hoogte */
+    padding-top: 80px; 
     position: relative;
     overflow: hidden;
 }
@@ -288,7 +283,7 @@ input:focus-visible {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: linear-gradient(45deg, #003f5c, #002f45); /* Donkerdere, diepere blauwtint */
+    background: linear-gradient(45deg, #003f5c, #002f45); 
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     opacity: 0.1;
@@ -298,7 +293,6 @@ body.dark-mode .hero-background-effect {
     opacity: 0.2;
 }
 
-/* Zorgt ervoor dat de main content de resterende ruimte opvult */
 main {
     flex-grow: 1;
 }
@@ -318,7 +312,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Plaats de animatie achter ALLE content */
+    z-index: -1; 
     overflow: hidden;
 }
 
@@ -328,10 +322,9 @@ main {
     left: var(--x);
     font-family: 'Courier New', Courier, monospace;
     color: var(--primary-color);
-    opacity: 0.15; /* Start subtiel zichtbaar */
+    opacity: 0.15; 
     font-size: 0.9rem;
-    user-select: none; /* Voorkom tekst selectie */
-    /* Vloeiende overgang voor alle veranderingen */
+    user-select: none;
     transition: opacity 0.4s ease, transform 0.2s linear, color 0.4s ease;
 }
 
@@ -373,10 +366,9 @@ section h2::after {
     gap: 30px;
 }
 
-/* Stijl voor de klikbare projectkaart-link */
 .project-card-link {
-    text-decoration: none; /* Verwijder de standaard onderstreping van de link */
-    color: inherit; /* Zorgt ervoor dat de tekst de normale kleur erft */
+    text-decoration: none; 
+    color: inherit; 
     display: block;
 }
 
@@ -386,10 +378,10 @@ section h2::after {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform; /* Prestatie-optimalisatie voor animatie */
-    display: flex; /* Maak van de kaart een flex-container */
-    flex-direction: column; /* Stapel de elementen verticaal */
-    height: 100%; /* Zorg dat de kaart de volledige hoogte van de grid-cel inneemt */
+    will-change: transform; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
 }
 
 .project-card:hover {
@@ -401,7 +393,6 @@ body.dark-mode .project-card:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Zorgt ervoor dat kaarten zonder afbeelding de content centreren */
 .project-card.no-image .project-content {
     display: flex;
     flex-direction: column;
@@ -421,9 +412,9 @@ body.dark-mode .project-card:hover {
 
 .project-content {
     padding: 25px;
-    display: flex; /* Maak ook de content een flex-container */
-    flex-direction: column; /* Stapel de content verticaal */
-    flex-grow: 1; /* Zorg dat dit element groeit om de beschikbare ruimte te vullen */
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
 }
 
 .project-content h3 {
@@ -432,10 +423,10 @@ body.dark-mode .project-card:hover {
 
 .project-tags {
     margin: 15px 0;
-    padding: 0; /* Verwijder standaard padding van ul */
-    list-style: none; /* Verwijder de bolletjes */
-    display: flex; /* Zorgt dat de tags naast elkaar komen */
-    flex-wrap: wrap; /* Zorgt dat tags netjes afbreken naar een nieuwe regel */
+    padding: 0; 
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap; 
 }
 
 .project-tags span {
@@ -454,11 +445,11 @@ body.dark-mode .project-card:hover {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    margin-top: auto; /* Duwt de link naar de onderkant van de kaart */
+    margin-top: auto; 
 }
 
 /* ------------------- */
-/* SKILLS/DIENSTEN SECTIE */
+/* /DIENSTEN SECTIE */
 /* ------------------- */
 .skills-section {
     background-color: var(--card-bg);
@@ -495,7 +486,7 @@ body.dark-mode .project-card:hover {
 
 /* Stijlen voor de detailweergave van een dienst */
 .service-detail-container {
-    display: none; /* Standaard verborgen */
+    display: none; 
     opacity: 0;
     transition: opacity 0.4s ease;
     text-align: left;
@@ -536,12 +527,10 @@ body.dark-mode .project-card:hover {
     transform: translateX(-5px);
 }
 
-/* Stijl voor de pakketten sectie, vergelijkbaar met projecten */
 .packages-section {
     background-color: var(--bg-color);
 }
 
-/* Klasse om items te verbergen met een fade-out */
 .skill-item.fading-out {
     opacity: 0;
     pointer-events: none;
@@ -585,6 +574,7 @@ body.dark-mode .project-card:hover {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 /* Zorg ervoor dat op desktop de linkerkant links uitlijnt */
 @media (min-width: 769px) {
     .footer-left {
@@ -641,14 +631,15 @@ body.dark-mode .project-card:hover {
 }
 
 
-/* 1. Tekst animatie vindt alleen plaats als je over de foto hovert */
+
 .about-me-image:hover ~ .about-me-text {
-    transform: translateY(-8px); /* Beweegt de tekst iets omhoog op hover */
+    transform: translateY(-8px); 
 }
 
 body.dark-mode .about-me-image:hover img {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* Donkere schaduw voor dark mode */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); 
 }
+
 /* ------------------- */
 /* CONTACT SECTIE      */
 /* ------------------- */
@@ -727,7 +718,7 @@ body.dark-mode .about-me-image:hover img {
 /* ------------------- */
 #cookie-banner {
     position: fixed;
-    bottom: 0; /* Houd de banner aan de onderkant */
+    bottom: 0; 
     left: 0;
     right: 0;
     background-color: var(--card-bg);
@@ -735,8 +726,8 @@ body.dark-mode .about-me-image:hover img {
     padding: 1rem 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     z-index: 1001;
-    transform: translateY(100%); /* Start buiten beeld */
-    transition: transform 0.5s ease-in-out; /* Animeer de transformatie */
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out; 
     border-top: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -745,7 +736,7 @@ body.dark-mode #cookie-banner {
 }
 
 #cookie-banner.show {
-    transform: translateY(0); /* Schuif de banner in beeld */
+    transform: translateY(0);
 }
 
 #cookie-banner .container {
@@ -767,7 +758,6 @@ body.dark-mode #cookie-banner {
     flex-shrink: 0;
 }
 
-/* Stijl voor de weiger-knop */
 #cookie-banner .cta-button.secondary {
     background-color: transparent;
     color: var(--primary-color);
@@ -816,7 +806,7 @@ body.dark-mode #cookie-banner {
 }
 
 .footer-privacy {
-    margin-top: 5px; /* Kleine ruimte tussen copyright en privacy link */
+    margin-top: 5px;
 }
 
 .footer-privacy a {
@@ -839,25 +829,19 @@ body.dark-mode #cookie-banner {
 }
 
 /* --- Footer Layout --- */
-/* Mobiel (standaard): Flexbox kolom layout */
+/* Desktop (standaard): Grid layout voor drie kolommen */
 .site-footer-bottom .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 15px;
 }
 
-/* Desktop: Grid layout voor drie kolommen */
-@media (min-width: 769px) {
-    .site-footer-bottom .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-    }
-    .footer-copyright { text-align: center; }
-    .social-links { justify-self: end; }
-    .footer-contact { text-align: start; }
-    }
+.footer-copyright { text-align: center; }
+.social-links { justify-self: end; }
+.footer-contact { text-align: start; }
+
+/* Opmerking: De mobiele weergave (flex-direction: column) 
+   wordt nu afgehandeld in de algemene media query aan het einde van dit bestand. */
 
 /* ------------------- */
 /* BACK TO TOP KNOP    */
@@ -876,7 +860,7 @@ body.dark-mode #cookie-banner {
     justify-content: center;
     text-decoration: none;
     opacity: 0;
-    border: none; /* Zorg ervoor dat er geen standaard rand is */
+    border: none;
     transform: translateY(100px);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -887,14 +871,12 @@ body.dark-mode #cookie-banner {
 }
 
 .back-to-top:hover {
-    /* De knop wordt iets groter op hover */
     transform: translateY(0) scale(1.1);
 }
 
 .back-to-top:active {
-    /* De knop wordt iets kleiner en beweegt omlaag bij het klikken */
     transform: translateY(2px) scale(1.05);
-    transition: transform 0.1s ease; /* Maak de klik-animatie sneller */
+    transition: transform 0.1s ease;
 }
 
 .back-to-top svg {
@@ -949,26 +931,8 @@ body.dark-mode #cookie-banner {
     box-shadow: var(--card-shadow);
 }
 .back-link, .back-link:visited {
-    color: var(--primary-color); /* Voorkomt de paarse 'visited' kleur */
+    color: var(--primary-color); 
     text-decoration: none;
-}
-
-/* ------------------- */
-/* PROJECT DETAIL PAGINA */
-/* ------------------- */
-.project-detail-header {
-    padding-top: 120px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-.project-detail-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-.project-detail-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-bottom: 80px;
 }
 
 /* ------------------- */
@@ -1041,7 +1005,6 @@ body.dark-mode #cookie-banner {
         font-size: 1.5rem;
     }
 
-    /* Zorg ervoor dat de dark-mode knop dezelfde grootte heeft als de links op mobiel */
     .main-nav .dark-mode-button {
         font-size: 1.5rem;
     }
@@ -1051,12 +1014,12 @@ body.dark-mode #cookie-banner {
     .testimonial-grid {
         display: flex;
         overflow-x: auto;
-        scroll-snap-type: x mandatory; /* Zorgt voor het 'vastklikken' van items */
+        scroll-snap-type: x mandatory; 
         gap: 20px;
-        padding: 10px 20px; /* Padding zodat kaarten niet tegen de rand plakken */
-        margin: 0 -20px; /* Compenseert de padding van de .container */
-        -webkit-overflow-scrolling: touch; /* Vloeiend scrollen op iOS */
-        scrollbar-width: none; /* Verberg scrollbar op Firefox */
+        padding: 10px 20px; 
+        margin: 0 -20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
     /* Verberg scrollbar op Chrome/Safari/Edge */
@@ -1085,9 +1048,9 @@ body.dark-mode #cookie-banner {
     }
 
 
-    /* --- Stijlen voor Project Detail Pagina's (verplaatst uit HTML) --- */
+    /* Project Detail Pagina's*/
     .project-detail-header h1 {
-        font-size: 2.5rem; /* Iets kleiner op mobiel */
+        font-size: 2.5rem; 
     }
     .project-detail-content img {
         width: 100%;
@@ -1117,7 +1080,7 @@ body.dark-mode #cookie-banner {
         padding: 0;
         z-index: 101; /* Boven de nav */
         position: absolute; /* Noodzakelijk voor 'right' positionering */
-        right: 20px; /* Vervangt de oude 'right: 1rem' */
+        right: 20px;
     }
 
     .hamburger {
@@ -1168,13 +1131,18 @@ body.dark-mode #cookie-banner {
     .site-footer-bottom .container {
         flex-direction: column;
         gap: 15px;
+        display: flex; /* Overschrijf de grid layout van desktop */
+        grid-template-columns: none; /* Reset grid-template-columns */
+        align-items: center;
     }
+
+    .footer-contact { text-align: center; }
 
     .social-links {
         order: -1; /* Plaatst de social links boven de copyright tekst op mobiel */
     }
     
-    /* Responsive voor Over Mij sectie */
+    /* Responsive voor aboutme sectie */
     .about-me-content {
         flex-direction: column;
         text-align: center;
@@ -1185,7 +1153,6 @@ body.dark-mode #cookie-banner {
         margin-bottom: 1.5rem;
     }
 
-    /* Nieuwe footer stijlen voor contactgegevens */
     /* Cookie banner op mobiel */
     #cookie-banner .container {
         flex-direction: column;

@@ -1,1 +1,0 @@
-// Dit bestand kan worden gebruikt voor specifieke functionaliteit op de pakketpagina's.
