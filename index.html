@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kali Web Works transformeert ideeën naar vloeiende, interactieve en gebruiksvriendelijke web-ervaringen. Bekijk ons portfolio en ontdek onze diensten.">
     <title>Kali Web Works - Webdesign & Development</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="media/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/media/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/media/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/media/favicon/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 </head>
 <body>
@@ -22,7 +22,7 @@
                     <li><a href="#skills">Diensten</a></li>
                     <li><a href="#pakketten">Pakketten</a></li>
                     <li><a href="#about-me">Over</a></li>
-                    <li><a href="subpaginas/contact.html">Contact</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
                     <li>
                         <button id="darkModeToggle" class="dark-mode-button" aria-label="Toggle dark mode">
                             <span class="light-mode-text">Light mode</span>
@@ -53,10 +53,9 @@
             <div class="container">
                 <h2 class="animate-on-scroll">Portfolio</h2>
                 <div class="project-grid">
-                    <!-- Project 1 -->
-                    <a href="project-kapsalon.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/project-kapsalon.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('media/imacand2xiphonekapsalon.png')"></div>
+                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonekapsalon.png')"></div>
                             <div class="project-content">
                                 <h3>Kapsalon</h3>
                                 <p>Een moderne website voor een lokale kapsalon gericht op online afspraken.</p>
@@ -68,10 +67,9 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Project 2 -->
-                    <a href="project-trainer.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/project-trainer.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('media/imacand2xiphonept.png');"></div>
+                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonept.png');"></div>
                             <div class="project-content">
                                 <h3>Personal Trainer</h3>
                                 <p>Een energieke en motiverende onepager voor een Personal Trainer uit Enschede.</p>
@@ -84,10 +82,9 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Project 3 -->
-                    <a href="project-huisverhuur.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/project-huisverhuur.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('media/imacand2xiphonevakantiehuis.png');"></div>
+                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonevakantiehuis.png');"></div>
                             <div class="project-content">
                                 <h3>Vakantiehuis verhuur</h3>
                                 <p>Een stijlvolle website voor de verhuur van een vakantiehuis met boekingssysteem.</p>
@@ -115,7 +112,7 @@
                     <button class="skill-item animate-on-scroll" data-service="beveiliging">Beveiliging</button>
                     <button class="skill-item animate-on-scroll" data-service="maatwerk">Maatwerk</button>
                 </div>
-                <!-- Container voor de detailweergave van een dienst -->
+                <!-- Container JS -->
                 <div id="service-detail-container" class="service-detail-container">
                     <button id="back-to-grid-button" class="back-to-grid-button">&larr; Terug naar diensten</button>
                     <h3 id="service-detail-title"></h3>
@@ -128,12 +125,10 @@
             <div class="container">
                 <h2 class="animate-on-scroll">Klanten aan het woord</h2>
                 <div class="testimonial-grid">
-                    <!-- Testimonial 1 -->
                     <div class="testimonial-card animate-on-scroll">
                         <p>"Ons idee is perfect vertaald naar een snelle en moderne website. De samenwerking met Robin was uitstekend en ik ben heel blij met het resultaat!"</p>
                         <cite>— Anna de Vries, Kapsalon Anna</cite>
                     </div>
-                    <!-- Testimonial 2 -->
                     <div class="testimonial-card animate-on-scroll">
                         <p>"Professioneel, creatief en technisch vaardig. Mijn boekingen zijn toegenomen sinds de livegang van de nieuwe site. Een aanrader!"</p>
                         <cite>— Mark van Crooij, Vakantiehuis Verhuur</cite>
@@ -146,8 +141,7 @@
             <div class="container">
                 <h2 class="animate-on-scroll">Kant en klare pakketten</h2>
                 <div class="project-grid">
-                    <!-- Pakket 1 -->
-                    <a href="subpaginas/pakket-visitekaartje.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/pakket-visitekaartje.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
                             <div class="project-content">
                                 <h3>Basis website</h3>
@@ -160,8 +154,7 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Pakket 2 -->
-                    <a href="subpaginas/pakket-mkb.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/pakket-mkb.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
                             <div class="project-content">
                                 <h3>MKB Pakket</h3>
@@ -174,8 +167,7 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Pakket 3 -->
-                    <a href="subpaginas/pakket-onderhoud.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/pakket-onderhoud.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
                             <div class="project-content">
                                 <h3>Zorgeloos Online</h3>
@@ -187,8 +179,7 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Pakket 4 -->
-                    <a href="subpaginas/pakket-extras.html" class="project-card-link animate-on-scroll">
+                    <a href="pages/pakket-extras.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
                             <div class="project-content">
                                 <h3>Extra's & Maatwerk</h3>
@@ -207,7 +198,7 @@
                 <h2 class="animate-on-scroll">Over Mij</h2>
                 <div class="about-me-content">
                     <div class="about-me-image animate-on-scroll">
-                        <img src="media/RKC.png" alt="Foto Kali">
+                        <img src="assets/media/RKC.png" alt="Foto Kali">
                     </div>
                     <div class="about-me-text animate-on-scroll">
                         <h3>Hoi, ik ben Robin Kali!</h3>
@@ -259,7 +250,7 @@
                 <div class="footer-copyright">
                     <p>&copy; <span id="current-year">2025</span> Kali Web Works. Alle rechten voorbehouden.</p>
                     <div class="footer-privacy">
-                        <a href="subpaginas/privacy.html">Privacyverklaring</a>
+                        <a href="pages/privacy.html">Privacyverklaring</a>
                     </div>
                 </div>
                 <div class="social-links">
@@ -274,7 +265,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
 
-    <script src="script.js" defer></script>
-    <script src="hero-background.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/hero-background.js" defer></script>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Het Digitale Visitekaartje pakket: een professionele one-page website voor ZZP'ers. Snel, betaalbaar en perfect voor mobiel.">
-    <title>Basis website pakket - Kali Web Works</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="pakket.css">
-    <link rel="icon" href="../media/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="../media/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../media/favicon/apple-touch-icon.png">
+    <meta name="description" content="Neem contact op met Kali Web Works voor vragen, offertes of een vrijblijvend gesprek. Vind hier onze contactgegevens, adres en locatie.">
+    <title>Contact - Kali Web Works</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="icon" href="../assets/media/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../assets/media/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/media/favicon/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -41,32 +41,51 @@
     </header>
 
     <main>
-        <section class="package-detail-header">
+        <section class="contact-page-header">
             <div class="container">
-                <h1>Basis website pakket</h1>
-                <p class="package-price">€ 595,- <span class="vat-info">(0% BTW)</span> | Levertijd: 1 - 2 weken</p>
+                <h1>Contact & Gegevens</h1>
+                <p>Neem vrijblijvend contact op of kom langs voor een kop koffie.</p>
             </div>
         </section>
 
-        <section class="package-detail-content container">
-            <div class="package-description">
-                <h2>Perfect voor de startende ondernemer</h2>
-                <p>De  snelle basiswebsite die perfect werkt op alle apparaten! Perfect voor kappers, nagelstylistes, klusjesmannen, glazenwassers en andere ZZP'ers die een professionele online aanwezigheid willen zonder gedoe.</p>
-                
-                <h3>Wat krijg je precies?</h3>
-                <ul>
-                    <li><strong>One-Page Design:</strong> Alle essentiële informatie op één overzichtelijke, scrollbare pagina. Duidelijk, snel en effectief.</li>
-                    <li><strong>Professionele Structuur:</strong> Een complete indeling met o.a. een introductie, een 'Over Mij' sectie, je diensten/prijzen, klantreviews en contactinformatie.</li>
-                    <li><strong>Perfect op Mobiel:</strong> Een vlekkeloze weergave op elke smartphone, tablet of desktop. Gegarandeerd.</li>
-                    <li><strong>Direct Contact via WhatsApp:</strong> Een prominente knop waarmee potentiële klanten je met één tik een bericht kunnen sturen.</li>
-                    <li><strong>Google Maps Integratie:</strong> Zodat klanten je zaak direct kunnen vinden en de route kunnen plannen.</li>
-                    <li><strong>Lokale Vindbaarheid</strong> Ik meld je site aan bij Google en zorg voor SEO basisinstellingen zodat je gevonden wordt op bijvoorbeeld "Kapper in de buurt".</li>
-                </ul>
-
-                <h3>Het resultaat</h3>
-                <p class="quote">"Een professionele, snelle en betrouwbare website die klanten oplevert. Je bent perfect vindbaar en bereikbaar, zodat jij je kunt focussen op waar je goed in bent."</p>
+        <section class="contact-page-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h2>Gegevens</h2>
+                        <ul>
+                            <li><strong>Bedrijfsnaam:</strong> Kali Web Works</li>
+                            <li><strong>Adres:</strong> Kievitstraat 6</li>
+                            <li><strong>Postcode:</strong> 7523 ZS Enschede</li>
+                            <li><strong>Telefoon:</strong> <a href="tel:06-11594549">06-11594549</a></li>
+                            <li><strong>E-mail:</strong> <a href="mailto:info@kaliwebworks.nl">info@kaliwebworks.nl</a></li>
+                            <li><strong>KVK:</strong> 93998103</li>
+                            <li><strong>BTW:</strong> 93998103x</li>
+                        </ul>
+                        <div class="google-maps">
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.435895125605!2d6.88280587711979!3d52.24845597200233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b813850806a43b%3A0x73f354738141383b!2sKievitstraat%206%2C%207523%20ZS%20Enschede!5e0!3m2!1snl!2snl!4v1716920638575!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <h2>Stuur een bericht</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Naam</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">E-mailadres</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Jouw bericht</label>
+                            </div>
+                            <button type="submit" class="cta-button">Verstuur bericht</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <a href="../index.html#pakketten" class="back-link">← Terug naar pakketten</a>
         </section>
     </main>
 
@@ -89,7 +108,7 @@
             <div class="footer-copyright">
                 <p>&copy; <span id="current-year">2025</span> Kali Web Works. Alle rechten voorbehouden.</p>
                 <div class="footer-privacy">
-                    <a href="privacy.html">Privacyverklaring</a>
+                    <a href="../pages/privacy.html">Privacyverklaring</a>
                 </div>
             </div>
             <div class="social-links">
@@ -104,7 +123,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
 
-    <script src="../script.js" defer></script>
-    <script src="pakket.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+
 </body>
 </html>
