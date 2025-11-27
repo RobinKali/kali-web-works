@@ -110,7 +110,7 @@ body.dark-mode .site-header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(100deg, transparent 20%, #ccff00 50%, transparent 90%);
+    background: linear-gradient(100deg, transparent 20%, #0f5c75 50%, transparent 90%);
     transform: translateX(101%); /* Start buiten beeld (rechts) */
     transition: transform 0.75s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -393,20 +393,21 @@ body.dark-mode .project-card:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project-card.no-image .project-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.project-image-wrapper {
+    height: 220px;
+    overflow: hidden; /* Belangrijk voor de schaal-animatie */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-.project-image {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.project-card:hover .project-image {
+.project-card:hover .project-image-wrapper img {
     transform: scale(1.05);
 }
 
@@ -464,7 +465,8 @@ body.dark-mode .project-card:hover {
     transition: opacity 0.4s ease;
 }
 
-.skill-item {
+.skill-item,
+a.skill-item {
     background: var(--bg-color);
     padding: 15px 25px;
     font-family: var(--font-family);
@@ -474,10 +476,12 @@ body.dark-mode .project-card:hover {
     font-weight: 600;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.4s ease;
     border: 1px solid transparent;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.skill-item:hover {
+.skill-item:hover, 
+a.skill-item:hover {
     transform: scale(1.1);
     background: var(--primary-color);
     color: white;
@@ -508,6 +512,13 @@ body.dark-mode .project-card:hover {
 .service-detail-container p {
     font-size: 1.1rem;
     line-height: 1.7;
+}
+
+.service-detail-container p a,
+.service-detail-container p a:visited {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .back-to-grid-button {

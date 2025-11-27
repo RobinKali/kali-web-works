@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceDescriptions = {
         design: {
             title: 'UI/UX Design',
-            text: 'Een krachtig design is de basis van elke succesvolle website. Wij vertalen jouw merkidentiteit naar een visueel aantrekkelijk en gebruiksvriendelijk ontwerp, geschikt voor alle apparaten!'
+            text: 'Een krachtig design is de basis van elke succesvolle website. Wij vertalen jouw merkidentiteit naar een visueel aantrekkelijk en gebruiksvriendelijk ontwerp, geschikt voor alle apparaten!<br><br><a href="pages/webdesign-twente.html">Lees meer over webdesign in Twente &rarr;</a>'
         },
         websites: {
             title: 'Responsieve Websites',
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Vul de detail container
                 detailTitle.textContent = service.title;
-                detailDescription.textContent = service.text;
+                detailDescription.innerHTML = service.text;
 
                 // 1. Fade de grid uit
                 skillsGrid.classList.add('fading-out');
@@ -279,12 +279,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const setupCarouselNavigation = (gridSelector, navSelector) => {
         const grid = document.querySelector(gridSelector);
         const nav = document.querySelector(navSelector);
-        const items = grid.querySelectorAll('.project-card-link');
 
-        if (!grid || !nav || items.length === 0) {
+        if (!grid || !nav || grid.children.length === 0) {
             return;
         }
 
+        const items = Array.from(grid.children);
         // navigatiebolletjes
         items.forEach((_, index) => {
             const dot = document.createElement('span');
@@ -336,6 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth <= 768) {
         setupCarouselNavigation('.projects-section .project-grid', '#projects-nav');
         setupCarouselNavigation('.packages-section .project-grid', '#packages-nav');
+        setupCarouselNavigation('.testimonials-section .testimonial-grid', '#testimonials-nav');
     }
 
     // ------------------- //

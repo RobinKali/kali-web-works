@@ -10,16 +10,41 @@
     <link rel="icon" href="assets/media/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/media/favicon/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Kali Web Works",
+      "image": "https://www.kaliwebworks.nl/assets/media/favicon/apple-touch-icon.png",
+      "@id": "https://www.kaliwebworks.nl",
+      "url": "https://www.kaliwebworks.nl",
+      "telephone": "+31611594549",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kievitstraat 6",
+        "addressLocality": "Enschede",
+        "postalCode": "7523 ZS",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.2484559,
+        "longitude": 6.8828058
+      }
+    }
+    </script>
 </head>
 <body>
 
     <header class="site-header">
         <div class="container">
-            <a href="#" class="logo">Kali Web Works</a>
+            <a href="index.html" class="logo">Kali Web Works</a>
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="#projecten">Portfolio</a></li>
                     <li><a href="#skills">Diensten</a></li>
+                    <li><a href="#branches">Branches</a></li>
                     <li><a href="#pakketten">Pakketten</a></li>
                     <li><a href="#about-me">Over</a></li>
                     <li><a href="pages/contact.html">Contact</a></li>
@@ -55,7 +80,9 @@
                 <div class="project-grid">
                     <a href="pages/project-kapsalon.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonekapsalon.png')"></div>
+                            <div class="project-image-wrapper">
+                                <img src="assets/media/imacand2xiphonekapsalon.png" alt="Portfolio voorbeeld van een website voor een kapsalon, getoond op een iMac en twee iPhones." loading="lazy">
+                            </div>
                             <div class="project-content">
                                 <h3>Kapsalon</h3>
                                 <p>Een moderne website voor een lokale kapsalon gericht op online afspraken.</p>
@@ -69,7 +96,9 @@
                     </a>
                     <a href="pages/project-trainer.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonept.png');"></div>
+                            <div class="project-image-wrapper">
+                                <img src="assets/media/imacand2xiphonept.png" alt="Portfolio voorbeeld van een website voor een personal trainer, getoond op een iMac en twee iPhones." loading="lazy">
+                            </div>
                             <div class="project-content">
                                 <h3>Personal Trainer</h3>
                                 <p>Een energieke en motiverende onepager voor een Personal Trainer uit Enschede.</p>
@@ -84,7 +113,9 @@
                     </a>
                     <a href="pages/project-huisverhuur.html" class="project-card-link animate-on-scroll">
                         <div class="project-card">
-                            <div class="project-image" style="background-image: url('assets/media/imacand2xiphonevakantiehuis.png');"></div>
+                            <div class="project-image-wrapper">
+                                <img src="assets/media/imacand2xiphonevakantiehuis.png" alt="Portfolio voorbeeld van een website voor vakantieverhuur, getoond op een iMac en twee iPhones." loading="lazy">
+                            </div>
                             <div class="project-content">
                                 <h3>Vakantiehuis verhuur</h3>
                                 <p>Een stijlvolle website voor de verhuur van een vakantiehuis met boekingssysteem.</p>
@@ -134,6 +165,25 @@
                         <cite>— Mark van Crooij, Vakantiehuis Verhuur</cite>
                     </div>
                 </div>
+                <div class="carousel-nav" id="testimonials-nav"></div>
+            </div>
+        </section>
+
+        <section id="branches" class="skills-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Branches</h2>
+                <div class="skills-grid">
+                    <a href="pages/landings/webdesign-horeca.html" class="skill-item animate-on-scroll">Horeca</a>
+                    <a href="pages/landings/webdesign-kapper.html" class="skill-item animate-on-scroll">Kappers & Barbers</a>
+                    <a href="pages/landings/webdesign-autodetailer.html" class="skill-item animate-on-scroll">Auto Detailers</a>
+                    <a href="pages/landings/webdesign-gym.html" class="skill-item animate-on-scroll">Gyms & Personal Trainers</a>
+                    <a href="pages/landings/webdesign-events.html" class="skill-item animate-on-scroll">Events</a>
+                    <a href="pages/landings/webdesign-autobedrijf.html" class="skill-item animate-on-scroll">Autobedrijven</a>
+                    <a href="pages/landings/webdesign-makelaar.html" class="skill-item animate-on-scroll">Makelaars</a>
+                    <a href="pages/landings/webdesign-hovenier.html" class="skill-item animate-on-scroll">Hoveniers</a>
+                    <a href="pages/landings/webdesign-schilder-stukadoor.html" class="skill-item animate-on-scroll">Schilders & Stukadoors</a>
+                    <a href="pages/landings/webdesign-rijschool.html" class="skill-item animate-on-scroll">Rijscholen</a>
+                </div>
             </div>
         </section>
 
@@ -145,7 +195,7 @@
                         <div class="project-card">
                             <div class="project-content">
                                 <h3>Basis website</h3>
-                                <p>Een krachtige one-page website, perfect voor de startende ZZP'er. Snel, professioneel en direct to the point.</p>
+                                <p>Een krachtige one-page website, perfect voor de ZZP'er. Snel, professioneel en geschikt voor alle apparaten.</p>
                                 <ul class="project-tags">
                                     <span>€ 595,-</span>
                                     <span>1-2 weken</span>
@@ -198,7 +248,7 @@
                 <h2 class="animate-on-scroll">Over Mij</h2>
                 <div class="about-me-content">
                     <div class="about-me-image animate-on-scroll">
-                        <img src="assets/media/RKC.png" alt="Foto Kali">
+                        <img src="assets/media/RKC.png" alt="Foto van Robin Kali, webdesigner en eigenaar van Kali Web Works">
                     </div>
                     <div class="about-me-text animate-on-scroll">
                         <h3>Hoi, ik ben Robin Kali!</h3>
