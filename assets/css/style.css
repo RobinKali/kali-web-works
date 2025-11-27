@@ -89,38 +89,26 @@ body.dark-mode .site-header.scrolled {
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 2rem; 
-    color: var(--primary-color);
+    display: block; 
+    height: 50px; 
     text-decoration: none;
-    /* Voorbereiding voor de hover-animatie */
     transition: transform 0.4s ease;
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--primary-color);
-    position: relative; 
-    overflow: hidden; 
 }
 
-.logo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.logo img {
     height: 100%;
-    background: linear-gradient(100deg, transparent 20%, #0f5c75 50%, transparent 90%);
-    transform: translateX(101%); /* Start buiten beeld (rechts) */
-    transition: transform 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+    width: auto;
+    display: block; /* Verwijder extra ruimte onder de afbeelding */
+    transition: filter 0.3s ease; /* Voor dark mode */
+    filter: brightness(0.9) saturate(1.0);
 }
 
+body.dark-mode .logo img {
+    /* Maakt het logo lichter in dark mode. Pas de waarden aan indien nodig. */
+    filter: brightness(1.0) saturate(1.0);
+}
 .logo:hover {
     transform: scale(1.05) rotate(-2deg); 
-}
-
-.logo:hover::after {
-    transform: translateX(-101%); 
 }
 
 .menu-toggle {
