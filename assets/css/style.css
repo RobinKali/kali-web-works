@@ -95,7 +95,8 @@ body.dark-mode .site-header.scrolled {
     transition: transform 0.4s ease;
 }
 
-.logo img {
+.logo img,
+.logo object {
     height: 100%;
     width: auto;
     display: block; /* Verwijder extra ruimte onder de afbeelding */
@@ -103,8 +104,8 @@ body.dark-mode .site-header.scrolled {
     filter: brightness(0.9) saturate(1.0);
 }
 
-body.dark-mode .logo img {
-    /* Maakt het logo lichter in dark mode. Pas de waarden aan indien nodig. */
+body.dark-mode .logo object {
+    /* Maakt het logo lichter in dark mode. */
     filter: brightness(1.0) saturate(1.0);
 }
 .logo:hover {

@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceDescriptions = {
         design: {
             title: 'UI/UX Design',
-            text: 'Een krachtig design is de basis van elke succesvolle website. Wij vertalen jouw merkidentiteit naar een visueel aantrekkelijk en gebruiksvriendelijk ontwerp, geschikt voor alle apparaten!<br><br><a href="pages/webdesign-twente.html">Lees meer over webdesign in Twente &rarr;</a>'
+            text: 'Een krachtig design is de basis van elke succesvolle website. Wij vertalen jouw merkidentiteit naar een visueel aantrekkelijk en gebruiksvriendelijk ontwerp, geschikt voor alle apparaten!<br><br><a href="pages/landings/webdesign-twente.html">Lees meer over webdesign &rarr;</a>'
         },
         websites: {
             title: 'Responsieve Websites',
