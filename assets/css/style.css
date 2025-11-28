@@ -102,6 +102,7 @@ body.dark-mode .site-header.scrolled {
     display: block; /* Verwijder extra ruimte onder de afbeelding */
     transition: filter 0.3s ease; /* Voor dark mode */
     filter: brightness(0.9) saturate(1.0);
+    pointer-events: none; /* Zorgt ervoor dat de link klikbaar is */
 }
 
 body.dark-mode .logo object {
